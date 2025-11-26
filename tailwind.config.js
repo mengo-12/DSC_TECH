@@ -21,7 +21,7 @@ module.exports = {
             fontFamily: {
                 cairo: ['Cairo', 'sans-serif'],
                 roboto: ['Roboto', 'sans-serif'],
-                almohand: ['Almohand', 'sans-serif'],
+                mohammad: ['var(--font-mohammad)'],
             },
             colors: {
                 primary: '#0068B4',    // اللون الأزرق

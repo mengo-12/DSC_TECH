@@ -26,13 +26,13 @@
 }
 
 /* استيراد خط المهند */
-@font-face {
+/* @font-face {
   font-family: 'Almohand';
-  src: url('/fonts/al-mohanad.ttf') format('truetype');
+  src: url('/fonts/mohammad-bold-art-1') format('truetype');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
-}
+} */
 
 /* Scrollbar Sidebar */
 .sidebar-scroll::-webkit-scrollbar {
@@ -88,7 +88,7 @@ html, body {
   height: 100%;
   margin: 0;
   /* font-family: 'Cairo', 'Roboto', sans-serif; */
-  font-family: 'Almohand', sans-serif;
+  font-family: var(--font-mohammad), sans-serif;
   scroll-behavior: smooth;
 }
 
