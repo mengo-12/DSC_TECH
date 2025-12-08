@@ -1,96 +1,109 @@
 {
-  "title": "YOSR Company",
-  "subtitle": "Integrated solutions in construction, trading, and safety systems.",
-  "aboutUs": "About Us",
-  "services": "Services",
-  "contact": "Contact",
-  "projects": "Projects",
-  "login": "Login",
-  "logout": "Logout",
 
-  "aboutUsTitle": "About Us",
-  "aboutUsDescription": "Yosr CO. was stablished in 2009 ,it is a 100% Saudi company with a highly experienced workforce.We are a capable  , technically qualified, looked forward looking and fully committed to customer satisfaction.The company-ny is divided into four main sectors:trade – industry – General Contracting – Security & Safety Systems, and we offer four these sectors expertise and mastery.",
-  "aboutCard1Title": "Our Vision",
-  "aboutCard1Desc": "To be a leading company in contracting and safety systems through continuous innovation.",
-  "aboutCard2Title": "Our Values",
-  "aboutCard2Desc": "Integrity, quality, commitment, and excellence are the foundations of our client relationships.",
-  "aboutCard3Title": "Our Mission",
-  "aboutCard3Desc": "To provide integrated solutions that ensure customer satisfaction and the highest standards of safety and quality.",
+  "logo": "ايكو تك",
+  "home": "الرئيسية",
+  "about": "من نحن",
+  "projects": "مشاريعنا",
+  "faq": "الأسئلة الشائعة",
+  "getInTouch": "تواصل معنا",
 
-  "ceoName":"Eng. / Saud H Al Qurashi",
-  "ceoMessage":"We are proud what we have accomplished in the last years and as we look to the tuture we will continue to build on the pillars that have helped us become so successful , Yosr company will remain focused on the fundamentals of security and safety and its best practices with an emphasis on sustainable growth serve.",
 
-  "aboutvisionTitle": "Our vision",
-  "aboutvisionDec": "We are fully aware of our responsibility towards the company and our customers, and we are committed to it as firmly as we are aware of the principles of work and the values that we set up years ago, which con-tributed to guiding all our decisions and actions towards the best. We work together with our employees as one team that responsible for implementing our strategic goals, and we acknowledge our commitment towards our clients in Yosr Company (For Trade – Industry – General Contracting – Security & Safety Systems)",
+    "title": "Welcome to Our Tech Company",
+    "subtitle": "We provide innovative IT solutions and digital services",
+    "button": "Explore Our Services",
+    "web": "Web Development",
+    "webText": "Designing modern, high-performance websites using the latest technologies.",
+    "app": "Applications",
+    "appText": "Developing innovative and user-friendly mobile applications.",
+    "cloud": "Cloud Computing",
+    "cloudText": "Powerful and secure cloud storage and automation solutions.",
+    "infra": "Infrastructure",
+    "infraText": "Professional management and maintenance of server systems.",
 
-  "aboutmissionTitle":"Our Mission",
-  "aboutmissionDec":"We believe that our continued success depends heavily on the effective contribution of our employees. This requires us to employ people with high qualifications and competencies who will contribute to the growth of the company. It is also necessary to keep them motivated to work and provide training and development programs.",
+      "servicesTitle": "Our Services",
 
-  "aboutgoalsTitle":"Our goals",
-  "aboutgoalsDesc":"To continue to develop and improve our services and to provide the best environmental control solutions and systems of high efficiency and we are committed to search for the most environmentally friendly compo-nents and use in all our products and follow the best specifications and standards in the processes of supply and installation that do not cause damage to our environment.",
+  "network": "Full Network Installation & Cabling",
+  "networkText": "We provide complete network installation and cabling, including network points setup, structured cabling, and optimized connectivity for offices and businesses.",
 
+  "server": "Server Installation & Configuration",
+  "serverText": "We install and configure servers from scratch, including system setup, storage management, service configuration, and enhanced security.",
+
+  "camera": "Security Cameras Installation",
+  "cameraText": "We install all types of indoor and outdoor CCTV cameras with full network integration and high-quality monitoring.",
+
+  "maintenance": "Office & Business Maintenance",
+  "maintenanceText": "We provide scheduled maintenance for computers, networks, and systems to ensure smooth and uninterrupted operations.",
+
+  "cloudMgmt": "Cloud & System Management",
+  "cloudMgmtText": "We manage cloud servers and business systems with performance monitoring, optimization, and secure data protection.",
+
+  "customSolutions": "Custom Technical Solutions",
+  "customSolutionsText": "We deliver tailored technical solutions designed specifically for your business needs, including systems, cloud services, and internal tools.",
+
+  "webApp": "Website & App Development",
+  "webAppText": "We develop high-quality websites and mobile applications using modern technologies to ensure performance, speed, and scalability.",
+
+  "contracts": "Monthly Maintenance Contracts",
+  "contractsText": "Comprehensive monthly maintenance contracts including technical support, continuous monitoring, and immediate issue resolution.",
+
+
+  "aboutTitle": "About Us",
+  "aboutText1": "We are a tech company specializing in providing integrated smart solutions, aiming to support your business with professional services including networks, systems, cloud, software, and maintenance.",
+  "aboutText2": "Our technical team has high expertise to ensure projects are executed with the highest quality and best security and performance standards.",
+  "aboutText3": "Our mission is to provide solutions based on creativity and innovation to help companies achieve digital transformation and growth.",
+  "aboutCard1": "Trust",
+  "aboutCard1Text": "We are committed to delivering reliable services and high quality that ensures customer satisfaction.",
+  "aboutCard2": "Quality",
+  "aboutCard2Text": "We apply the highest standards in execution to ensure system efficiency and continuity.",
+  "aboutCard3": "Innovation",
+  "aboutCard3Text": "We always strive to provide advanced solutions that help you progress and achieve digital transformation.",
+
+
+  "ourProjects": "Our Projects",
   
-  "servicesTitle": "Our Services",
-  "fireSystems": "Fire Suppression Systems",
-  "fireSystemsDesc": "Installation and operation of modern fire suppression systems according to the highest standards.",
-  "earlyAlarm": "Early Fire Alarm Systems",
-  "earlyAlarmDesc": "Traditional and addressable early fire alarm systems with programming.",
-  "fireEquip": "Firefighting Equipment",
-  "fireEquipDesc": "Provision of all necessary firefighting equipment to ensure safety.",
-  "fireMaterials": "Fire-Resistant Materials",
-  "fireMaterialsDesc": "High-quality materials to prevent fire spread and protect facilities.",
-  "safetyTools": "Safety Tools",
-  "safetyToolsDesc": "Professional safety tools to ensure employee and customer protection.",
-  "maintenance": "Periodic Maintenance",
-  "maintenanceDesc": "Scheduled maintenance for all fire systems to ensure continuous operation.",
+  "proj_network": "Complete Network for Modern Tech Company",
+  "proj_network_desc": "Installed servers, switches, routers, and WiFi solutions successfully.",
 
+  "proj_server": "Server & Active Directory Setup for Al-Rouya Company",
+  "proj_server_desc": "Setup, security, and backup of servers integrated with the internal network.",
 
-  "achievementsTitle": "Our Achievements",
-  "projectsCompleted": "Projects Completed",
-  "projectsCompletedDesc": "Successfully completed over 150 projects since our establishment.",
-  "happyClients": "Happy Clients",
-  "happyClientsDesc": "Achieved satisfaction for more than 300 clients through our excellent services.",
-  "yearsExperience": "Years of Experience",
-  "yearsExperienceDesc": "Over 20 years of experience across contracting, trading, and safety fields.",
-  "awardsReceived": "Awards Received",
-  "awardsReceivedDesc": "Received several awards in innovation and quality excellence.",
+  "proj_camera": "Comprehensive CCTV System for Administrative Building",
+  "proj_camera_desc": "Installed IP cameras, NVR, and remote monitoring setup.",
 
+  "proj_attendance": "Attendance & Fingerprint System Integrated with Accounting",
+  "proj_attendance_desc": "Installed biometric systems linked to accounting software.",
 
-  "partnersTitle": "partners",
+  "proj_voip": "VoIP PBX System for Telecom Company",
+  "proj_voip_desc": "Setup, programming, call forwarding, and branch integration.",
 
-  "testimonialsTitle": "Testimonials",
+  "proj_cyber": "Cybersecurity Services for Company X",
+  "proj_cyber_desc": "Network protection, vulnerability testing, and security policy implementation.",
+
+  "proj_web": "Website & App Development for E-commerce Company",
+  "proj_web_desc": "Responsive website with an easy-to-use interface and integrated management system.",
+
+  "proj_maintenance": "Maintenance & Technical Support for Al-Ibda Institution",
+  "proj_maintenance_desc": "Periodic visits, emergency support, and network/device monitoring.",
 
 
 
-
-
-  "titlecontact": "Contact Us",
-  "subtitlecontact": "We are happy to hear from you anytime — our team is always ready to assist and answer your inquiries.",
-  "name": "Full Name",
-  "email": "Email Address",
-  "phone": "Phone Number",
-  "message": "Write your message here...",
-  "send": "Send Message",
-  "addressLine1": "Makkah, Saudi Arabia",
-  "addressLine2": "Al Shisha - King Fahd Road",
-  "addressLine3": "P.O. Box 5070, Postal Code 21955",
-  "telefax": "Telefax: +966125700800",
-  "unified": "Unified Number: 920004000",
-  "mapTitle": "YOSR Company Location - Makkah",
-
-
-      "aboutTitle": "About Us",
-    "aboutDesc": "At YOSR, we strive to deliver innovative and effective solutions in technology and consulting to enhance customer experiences and support business growth.",
+    "companyName": "YOSR TECH",
+    "aboutText": "A company specialized in providing innovative technology solutions including networks, systems, cybersecurity, web development, and technical support.",
     "quickLinks": "Quick Links",
-    "linkAbout": "About Us",
-    "linkServices": "Our Services",
-    "linkProjects": "Projects",
-    "linkContact": "Contact Us",
     "contactUs": "Contact Us",
-    "phonefooter": "Phone",
-    "emailfooter": "Email",
-    "address": "Makkah, Saudi Arabia",
-    "followUs": "Follow Us",
-    "rights": "© {{year}} YOSR Company. All rights reserved."
+    "phone": "+966 55 555 5555",
+    "email": "info@yosr.com.sa",
+    "address": "Saudi Arabia - Riyadh",
+    "newsletter": "Newsletter",
+    "newsletterText": "Subscribe to receive our latest updates.",
+    "emailPlaceholder": "Email Address",
+    "subscribe": "Subscribe",
+    "rights": "All rights reserved.",
+
+    "services": "Services",
+    "projects-footer": "Projects",
+    "about-footer": "About Us",
+    "contact": "Contact"
+
 
 }

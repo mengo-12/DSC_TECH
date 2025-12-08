@@ -1,84 +1,114 @@
-'use client'
-
-import { useEffect, useRef } from 'react'
-import Image from 'next/image'
-import { useKeenSlider } from 'keen-slider/react'
-import 'keen-slider/keen-slider.min.css'
-import { useTranslation } from 'react-i18next'
+"use client";
+import { motion } from "framer-motion";
+import { FaLaptopCode, FaMobileAlt, FaCloud, FaServer } from "react-icons/fa";
+import { useTranslation } from "react-i18next";
+import { useSettings } from "../context/SettingsContext";
 
 export default function Hero() {
-    const { t, i18n } = useTranslation('translation')
+  const { t } = useTranslation();
+  const { dark } = useSettings();
 
-    const slides = [
-        // '/images/1.png',
-        '/images/12.png',
-        '/images/yosr-makkah.png'
-    ]
+  const cards = [
+    {
+      icon: <FaLaptopCode className="w-8 h-8 mb-2 text-[#26A0DC]" />,
+      title: t("web"),
+      text: t("webText"),
+    },
+    {
+      icon: <FaMobileAlt className="w-8 h-8 mb-2 text-[#26A0DC]" />,
+      title: t("app"),
+      text: t("appText"),
+    },
+    {
+      icon: <FaCloud className="w-8 h-8 mb-2 text-[#26A0DC]" />,
+      title: t("cloud"),
+      text: t("cloudText"),
+    },
+    {
+      icon: <FaServer className="w-8 h-8 mb-2 text-[#26A0DC]" />,
+      title: t("infra"),
+      text: t("infraText"),
+    },
+  ];
 
-    // 🔹 مرجع لضمان إعادة تشغيل KeenSlider عند تغيير اللغة
-    const keenRef = useRef(null)
+  return (
+    <section
+      id="hero"
+      className={`relative ${dark ? "text-white" : "text-gray-900"}`}
+      style={{
+        backgroundImage: "url('/images/1155692_5940.jpg')",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+        backgroundBlendMode: "overlay",
+        backgroundColor: "#26A0DC",
+      }}
+    >
+      <div className="max-w-7xl mx-auto w-full px-6 py-20 flex flex-col gap-12">
+        {/* Row 1: الصورة على اليسار والنص على اليمين */}
+        <div className="flex flex-col md:flex-row items-center gap-12">
+          {/* الصورة على اليسار */}
+          {/* <div className="flex-1 hidden md:block">
+            <img
+              src="/images/itSupport-rmbg.png"
+              alt="Vector Art"
+              className="w-full h-auto"
+            />
+          </div> */}
 
-    const [sliderRef, instanceRef] = useKeenSlider(
-        {
-            loop: true,
-            slides: { perView: 1 },
-            created: () => {
-                // console.log('✅ Slider initialized')
-            },
-        },
-        []
-    )
+          {/* النص والزر على اليمين بالكامل */}
+          <motion.div
+            initial={{ opacity: 0, x: 50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 1 }}
+            className="flex-1 flex flex-col items-end text-right"
+          >
+            <h1 className="text-4xl md:text-6xl font-bold mb-4">
+              {t("title")}
+            </h1>
+            <p className="text-lg md:text-2xl mb-6">{t("subtitle")}</p>
+            <a
+              href="#services"
+              className={`inline-block px-8 py-3 rounded-xl font-semibold shadow-lg hover:shadow-2xl hover:scale-105 transition-all ${
+                dark
+                  ? "bg-gradient-to-r from-[#1B82C9] to-[#26A0DC] text-white"
+                  : "bg-gradient-to-r from-[#26A0DC] to-[#1B82C9] text-white"
+              }`}
+            >
+              {t("button")}
+            </a>
+          </motion.div>
 
-    // 🔹 تشغيل السلايدر تلقائيًا
-    useEffect(() => {
-        if (!instanceRef.current) return
-        const interval = setInterval(() => {
-            instanceRef.current.next()
-        }, 3500)
-        return () => clearInterval(interval)
-    }, [instanceRef])
-
-    // 🔹 تحديث الاتجاه عند تغيير اللغة
-    useEffect(() => {
-        document.documentElement.dir = i18n.language === 'ar' ? 'rtl' : 'ltr'
-
-        // إعادة تشغيل السلايدر عند تغيير اللغة (يُعيد ترتيب الشرائح)
-        if (instanceRef.current) {
-            instanceRef.current.update()
-        }
-    }, [i18n.language])
-
-    return (
-        <div
-            dir={i18n.language === 'ar' ? 'rtl' : 'ltr'}
-            ref={(node) => {
-                sliderRef(node)
-                keenRef.current = node
-            }}
-            className="keen-slider relative h-[75vh] w-full overflow-hidden bg-black"
-        >
-            {slides.map((src, i) => (
-                <div key={i} className="keen-slider__slide relative w-full h-full">
-                    {/* الصورة */}
-                    <Image
-                        src={src}
-                        alt={`Slide ${i + 1}`}
-                        fill
-                        className="object-cover"
-                        priority={i === 0}
-                    />
-
-                    {/* النصوص فوق الصورة */}
-                    <div className="absolute inset-0 z-10 bg-black/40 flex flex-col items-center justify-center px-4 text-center">
-                        {/* <h1 className="text-3xl md:text-5xl font-bold text-white mb-4 drop-shadow-lg">
-                            {t('title')}
-                        </h1>
-                        <p className="text-lg md:text-2xl text-white max-w-2xl drop-shadow-md">
-                            {t('subtitle')}
-                        </p> */}
-                    </div>
-                </div>
-            ))}
+          <div className="flex-1 hidden md:block">
+            <img
+              src="/images/itSupport-rmbg.png"
+              alt="Vector Art"
+              className="w-full h-auto"
+            />
+          </div>
         </div>
-    )
+
+        {/* Row 2: الكارد أفقي يبدأ من اليمين */}
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1 }}
+          className="flex flex-row-reverse flex-wrap gap-6"
+        >
+          {cards.map((card, index) => (
+            <div
+              key={index}
+              className={`bg-white/20 backdrop-blur-md border border-white/30 rounded-2xl p-6 flex-1 min-w-[250px] flex flex-col items-center text-center shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-transform ${
+                dark ? "text-white" : "text-black"
+              }`}
+            >
+              {card.icon}
+              <h3 className="font-bold text-xl mb-2">{card.title}</h3>
+              <p>{card.text}</p>
+            </div>
+          ))}
+        </motion.div>
+      </div>
+    </section>
+  );
 }

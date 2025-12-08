@@ -1,23 +1,35 @@
-import Hero from '../components/Hero'
-import About from '../components/About'
-import Services from '../components/Services'
-import Projects from '../components/Projects'
-import Testimonials from '../components/Testimonials'
-import Footer from '../components/Footer'
-import ContactSection from '../components/ContactSection'
-import PartnersSection from '../components/Partnar'
+"use client";
+import React from "react";
+import ThemeSwitcher from "@/components/ThemeSwitcher";
+import LanguageSwitcher from "@/components/LanguageSwitcher";
 
-export default function Home() {
+import Header from "@/components/Header";
+import Hero from "@/components/Hero";
+import Services from "@/components/Services";
+import About from "@/components/About";
+import Contact from "@/components/contact";
+import Footer from "@/components/Footer";
+import Gallery from "@/components/Gallery";
+
+export default function HomePage() {
   return (
-    <main>
-      <section id="hero"><Hero /></section>
-      <section id="aboutUs"><About /></section>
-      <section id="services"><Services /></section>
-      <section id="projects"><Projects /></section>
-      <section id="partners"><PartnersSection /></section>
-      <section id="testimonials"><Testimonials /></section>
-      <section id="contact"><ContactSection /></section>
+    <main className="min-h-screen bg-gray-50 text-gray-900 dark:bg-[#071027] dark:text-slate-100 transition-colors">
+      {/* <div className="py-6">
+          <div className="max-w-7xl mx-auto px-6 flex items-center justify-between gap-4"> */}
+      <Header />
+      {/* <div className="flex items-center gap-3">
+            </div>
+            </div>
+            <LanguageSwitcher />
+            <ThemeSwitcher />
+        </div> */}
+
+      <Hero />
+      <Services />
+      <About />
+      <Gallery />
+      <Contact />
       <Footer />
     </main>
-  )
+  );
 }

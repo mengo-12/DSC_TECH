@@ -1,243 +1,149 @@
-// 'use client'
-
-// import { motion } from 'framer-motion'
-// import Image from 'next/image'
-// import { useTranslation } from 'react-i18next'
-
 // export default function About() {
-//     const { t } = useTranslation('translation')
-
-//     const sections = [
-//         {
-//             title: t('aboutvisionTitle'),
-//             description: t('aboutvisionDec'),
-//             color: 'bg-blue-100 dark:bg-blue-900',
-//             accent: 'border-blue-500'
-//         },
-//         {
-//             title: t('aboutmissionTitle'),
-//             description: t('aboutmissionDec'),
-//             color: 'bg-green-100 dark:bg-green-900',
-//             accent: 'border-green-500'
-//         },
-//         {
-//             title: t('aboutgoalsTitle'),
-//             description: t('aboutgoalsDesc'),
-//             color: 'bg-yellow-100 dark:bg-yellow-900',
-//             accent: 'border-yellow-500'
-//         },
-//     ]
-
-//     return (
-//         <section
-//             id="about"
-//             className="relative py-20 px-6 bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100 transition-colors duration-500"
-//         >
-//             <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-12">
-
-//                 {/* الصورة الجانبية */}
-//                 <motion.div
-//                     initial={{ opacity: 0, x: -50 }}
-//                     whileInView={{ opacity: 1, x: 0 }}
-//                     transition={{ duration: 0.8 }}
-//                     className="w-full md:w-1/2 relative h-80 md:h-[400px] rounded-xl overflow-hidden shadow-lg"
-//                 >
-//                     <Image
-//                         src="/images/company.jpg"
-//                         alt="Company"
-//                         fill
-//                         style={{ objectFit: 'cover' }}
-//                         className="rounded-xl"
-//                         priority
-//                     />
-//                 </motion.div>
-
-//                 {/* النصوص */}
-//                 <motion.div
-//                     initial={{ opacity: 0, x: 50 }}
-//                     whileInView={{ opacity: 1, x: 0 }}
-//                     transition={{ duration: 0.8 }}
-//                     className="w-full md:w-1/2 flex flex-col justify-center gap-6"
-//                 >
-//                     <h2 className="text-4xl md:text-5xl font-bold text-[#0068B4] dark:text-white">
-//                         {t('aboutUsTitle')}
-//                     </h2>
-//                     <p className="text-lg md:text-xl leading-relaxed text-gray-700 dark:text-gray-300">
-//                         {t('aboutUsDescription')}
-//                     </p>
-
-//                     {/* كلمة المدير التنفيذي */}
-//                     {/* صورة المدير */}
-//                     <div className="flex-shrink-0 w-36 h-36 relative rounded-full overflow-hidden shadow-lg ring-2 ring-[#0068B4]">
-//                         <Image
-//                             src="/images/ceo.jpg"
-//                             alt="CEO"
-//                             fill
-//                             style={{ objectFit: 'cover' }}
-//                         />
-//                     </div>
-
-//                     {/* نص الرسالة */}
-//                     <div className="flex-1 text-center md:text-left">
-//                         <p className="text-lg md:text-xl text-gray-700 dark:text-gray-300 italic mb-4 leading-relaxed">
-//                             {t('ceoMessage')}
-//                         </p>
-//                         <h3 className="text-2xl font-bold text-[#0068B4] dark:text-white">
-//                             {t('ceoName')}
-//                         </h3>
-//                         <p className="text-gray-600 dark:text-gray-400 text-sm md:text-base mt-1">
-//                             {t('ceoTitle', 'المدير التنفيذي')}
-//                         </p>
-//                     </div>
-//                 </motion.div>
-//             </div>
-
-//             {/* الكارد المتعدد الأقسام - سطر جديد */}
-//             <div className="max-w-6xl mx-auto mt-16 grid grid-cols-1 md:grid-cols-3 gap-8">
-//                 {sections.map((section, i) => (
-//                     <motion.div
-//                         key={i}
-//                         initial={{ opacity: 0, y: 50 }}
-//                         whileInView={{ opacity: 1, y: 0 }}
-//                         transition={{ duration: 0.8, delay: i * 0.2 }}
-//                         className={`relative rounded-xl shadow-lg p-6 border-t-4 ${section.accent} ${section.color} hover:shadow-2xl hover:scale-105 transition-transform duration-300`}
-//                     >
-//                         <h3 className="text-2xl font-bold mb-4 text-gray-900 dark:text-white">{section.title}</h3>
-//                         <p className="text-gray-700 dark:text-gray-300 leading-relaxed">{section.description}</p>
-//                     </motion.div>
-//                 ))}
-//             </div>
-//         </section >
-//     )
+//   return (
+//     <section id="about" className="bg-gray-100 py-20 px-6">
+//       <div className="max-w-5xl mx-auto text-center">
+//         <h2 className="text-3xl font-bold mb-6">من نحن</h2>
+//         <p className="text-lg md:text-xl">
+//           نحن شركة تقنية متخصصة في تقديم حلول مبتكرة تساعد الشركات على النمو والتطور في عالم رقمي سريع التغير.
+//         </p>
+//       </div>
+//     </section>
+//   );
 // }
 
 
+"use client";
+import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
 
-'use client'
+export default function AboutSection() {
+  const { t } = useTranslation();
 
-import { motion } from 'framer-motion'
-import Image from 'next/image'
-import { useTranslation } from 'react-i18next'
-
-export default function About() {
-    const { t } = useTranslation('translation')
-
-    const sections = [
-        {
-            title: t('aboutvisionTitle'),
-            description: t('aboutvisionDec'),
-            color: 'bg-blue-100 dark:bg-blue-900',
-            accent: 'border-blue-500'
-        },
-        {
-            title: t('aboutmissionTitle'),
-            description: t('aboutmissionDec'),
-            color: 'bg-green-100 dark:bg-green-900',
-            accent: 'border-green-500'
-        },
-        {
-            title: t('aboutgoalsTitle'),
-            description: t('aboutgoalsDesc'),
-            color: 'bg-yellow-100 dark:bg-yellow-900',
-            accent: 'border-yellow-500'
-        },
-    ]
-
-    return (
-        <section
-            id="about"
-            className="relative py-20 px-6 bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100 transition-colors duration-500"
+  return (
+    <section
+      id="about"
+      className="py-24 px-6"
+      style={{
+        backgroundImage: "linear-gradient(to bottom, #0049BF 20%, #004FC4 80%)",
+      }}
+    >
+      <div className="max-w-6xl mx-auto text-center">
+        {/* العنوان */}
+        <motion.h2
+          initial={{ opacity: 0, y: -30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+          className="text-4xl font-bold text-white mb-10"
         >
-            <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-12">
+          {t("aboutTitle", "من نحن")}
+        </motion.h2>
 
-                {/* الصورة الجانبية */}
-                <motion.div
-                    initial={{ opacity: 0, x: -50 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.8 }}
-                    className="w-full md:w-1/2 relative h-80 md:h-[400px] rounded-xl overflow-hidden shadow-lg"
-                >
-                    {/* <Image
-                        src="/images/company.jpg"
-                        alt="Company"
-                        fill
-                        style={{ objectFit: 'cover' }}
-                        className="rounded-xl"
-                        priority
-                    /> */}
+        {/* المحتوى الداخلي */}
+        <motion.div
+          initial={{ opacity: 0, scale: 0.85 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.7 }}
+          viewport={{ once: true }}
+          className="bg-white/15 backdrop-blur-md border border-white/20 
+                     rounded-3xl p-8 md:p-12 shadow-xl mx-auto max-w-4xl text-white"
+        >
+          <p className="text-lg leading-relaxed mb-6">
+            {t(
+              "aboutText1",
+              "نحن شركة تقنية متخصصة في تقديم الحلول الذكية المتكاملة، ونهدف إلى دعم أعمالكم عبر خدمات احترافية تشمل الشبكات، الأنظمة، السحابة، البرمجيات، والصيانة."
+            )}
+          </p>
 
-                    <Image
-                        src="/images/soura-4.png"
-                        alt="Company"
-                        fill
-                        style={{ objectFit: 'cover' }}
-                        className="rounded-xl"
-                        priority
-                    />
-                </motion.div>
+          <p className="text-lg leading-relaxed mb-6">
+            {t(
+              "aboutText2",
+              "نعمل بفريق تقني بخبرات عالية لضمان تنفيذ المشاريع بأعلى جودة وبأفضل معايير الأمان والأداء."
+            )}
+          </p>
 
-                {/* نصوص التعريف */}
-                <motion.div
-                    initial={{ opacity: 0, x: 50 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.8 }}
-                    className="w-full md:w-1/2 flex flex-col justify-center gap-6"
-                >
-                    <h2 className="text-4xl md:text-5xl font-bold text-[#0068B4] dark:text-white">
-                        {t('aboutUsTitle')}
-                    </h2>
-                    <p className="text-lg md:text-xl leading-relaxed text-gray-700 dark:text-gray-300">
-                        {t('aboutUsDescription')}
-                    </p>
-                </motion.div>
+          <p className="text-lg leading-relaxed">
+            {t(
+              "aboutText3",
+              "رسالتنا هي توفير حلول تعتمد على الإبداع والابتكار لمساعدة الشركات على التحول الرقمي وتحقيق النمو."
+            )}
+          </p>
+        </motion.div>
+
+        {/* 3 بطاقات جانبية مع أيقونات */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-14">
+          
+          {/* الثقة */}
+          <motion.div
+            initial={{ opacity: 0, y: 25 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl p-6 text-white shadow-lg flex flex-col items-center"
+          >
+            {/* أيقونة */}
+            <div className="bg-white/20 p-4 rounded-full mb-4">
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-10 w-10 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 12l9 4.5-9 4.5-9-4.5 9-4.5z" />
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 12V3m0 0L3 7.5M12 3l9 4.5" />
+              </svg>
             </div>
+            <h3 className="font-bold text-xl mb-2">{t("aboutCard1", "ثقة")}</h3>
+            <p className="text-sm opacity-90">
+              {t(
+                "aboutCard1Text",
+                "ملتزمون بتقديم خدمات موثوقة وجودة عالية تضمن رضا عملائنا."
+              )}
+            </p>
+          </motion.div>
 
-            {/* كلمة المدير التنفيذي - بطاقة مستقلة */}
-            <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.2 }}
-                className="max-w-5xl mx-auto mt-16 bg-linear-to-r from-white via-blue-50 to-white dark:from-gray-800 dark:via-blue-900 dark:to-gray-800 rounded-3xl shadow-2xl p-8 flex flex-col md:flex-row items-center gap-8 hover:scale-105 transition-transform duration-500"
-            >
-                {/* صورة المدير */}
-                <div className="shrink-0 w-36 h-36 relative rounded-full overflow-hidden shadow-lg ring-2 ring-[#0068B4]">
-                    <Image
-                        src="/images/ceo.png"
-                        alt="CEO"
-                        fill
-                        style={{ objectFit: 'cover' }}
-                    />
-                </div>
-
-                {/* نص الرسالة */}
-                <div className="flex-1 text-center md:text-left">
-                    <p className="text-lg md:text-xl text-gray-700 dark:text-gray-300 italic mb-4 leading-relaxed">
-                        {t('ceoMessage')}
-                    </p>
-                    <h3 className="text-2xl font-bold text-[#0068B4] dark:text-white">
-                        {t('ceoName')}
-                    </h3>
-                    <p className="text-gray-600 dark:text-gray-400 text-sm md:text-base mt-1">
-                        {t('ceoTitle', 'المدير التنفيذي')}
-                    </p>
-                </div>
-            </motion.div>
-
-            {/* الكارد المتعدد الأقسام */}
-            <div className="max-w-6xl mx-auto mt-16 grid grid-cols-1 md:grid-cols-3 gap-8">
-                {sections.map((section, i) => (
-                    <motion.div
-                        key={i}
-                        initial={{ opacity: 0, y: 50 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.8, delay: i * 0.2 }}
-                        className={`relative rounded-xl shadow-lg p-6 border-t-4 ${section.accent} ${section.color} hover:shadow-2xl hover:scale-105 transition-transform duration-300`}
-                    >
-                        <h3 className="text-2xl font-bold mb-4 text-gray-900 dark:text-white">{section.title}</h3>
-                        <p className="text-gray-700 dark:text-gray-300 leading-relaxed">{section.description}</p>
-                    </motion.div>
-                ))}
+          {/* الجودة */}
+          <motion.div
+            initial={{ opacity: 0, y: 25 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.75 }}
+            viewport={{ once: true }}
+            className="bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl p-6 text-white shadow-lg flex flex-col items-center"
+          >
+            {/* أيقونة */}
+            <div className="bg-white/20 p-4 rounded-full mb-4">
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-10 w-10 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+              </svg>
             </div>
-        </section>
-    )
+            <h3 className="font-bold text-xl mb-2">{t("aboutCard2", "جودة")}</h3>
+            <p className="text-sm opacity-90">
+              {t(
+                "aboutCard2Text",
+                "نطبق أعلى المعايير في التنفيذ لضمان كفاءة الأنظمة واستمراريتها."
+              )}
+            </p>
+          </motion.div>
+
+          {/* الابتكار */}
+          <motion.div
+            initial={{ opacity: 0, y: 25 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.9 }}
+            viewport={{ once: true }}
+            className="bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl p-6 text-white shadow-lg flex flex-col items-center"
+          >
+            {/* أيقونة */}
+            <div className="bg-white/20 p-4 rounded-full mb-4">
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-10 w-10 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+              </svg>
+            </div>
+            <h3 className="font-bold text-xl mb-2">{t("aboutCard3", "ابتكار")}</h3>
+            <p className="text-sm opacity-90">
+              {t(
+                "aboutCard3Text",
+                "نسعى دائمًا لتقديم حلول متطورة تساعدكم على التقدم والتحول الرقمي."
+              )}
+            </p>
+          </motion.div>
+        </div>
+      </div>
+    </section>
+  );
 }
