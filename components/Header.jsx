@@ -4,6 +4,7 @@ import { useTranslation } from "react-i18next";
 import { useSettings } from "../context/SettingsContext";
 import ThemeSwitcher from "@/components/ThemeSwitcher";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
+import Image from "next/image";
 
 export default function Header() {
   const { t } = useTranslation();
@@ -12,10 +13,20 @@ export default function Header() {
   return (
     <header className="fixed top-0 left-0 w-full z-50 bg-transparent py-4">
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
+
         {/* الشعار */}
-        <h1 className={`font-bold text-xl ${dark ? "text-white" : "text-gray-900"}`}>
-          {t("logo") || "EcoTec"}
-        </h1>
+        <div className="flex items-center">
+          <a href="#home">
+            <Image
+              src="/images/767.png"
+              alt="Logo"
+              width={120}
+              height={40}
+              className="object-contain"
+              priority
+            />
+          </a>
+        </div>
 
         {/* روابط الهيدر */}
         <nav className="flex items-center gap-4 md:gap-6">
@@ -40,7 +51,7 @@ export default function Header() {
             </a>
           </div>
 
-          {/* مبدّل اللغة والوضع الليلي */}
+          {/* مبدل اللغة والوضع الليلي */}
           <div className="flex items-center gap-3">
             <LanguageSwitcher />
             <ThemeSwitcher />
