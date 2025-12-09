@@ -45,7 +45,7 @@ export default function Projects() {
     },
     {
       icon: "💻",
-      img: "/images/web-app.jpg",
+      img: "/images/Web-App.jpg",
       titleKey: "proj_web",
       descKey: "proj_web_desc",
     },
