@@ -1,3 +1,120 @@
+// "use client";
+// import { motion } from "framer-motion";
+// import { FaLaptopCode, FaMobileAlt, FaCloud, FaServer } from "react-icons/fa";
+// import { useTranslation } from "react-i18next";
+// import { useSettings } from "../context/SettingsContext";
+
+// export default function Hero() {
+//   const { t } = useTranslation();
+//   const { dark } = useSettings();
+
+//   const cards = [
+//     {
+//       icon: <FaLaptopCode className="w-8 h-8 mb-2 text-[#26A0DC]" />,
+//       title: t("web"),
+//       text: t("webText"),
+//     },
+//     {
+//       icon: <FaMobileAlt className="w-8 h-8 mb-2 text-[#26A0DC]" />,
+//       title: t("app"),
+//       text: t("appText"),
+//     },
+//     {
+//       icon: <FaCloud className="w-8 h-8 mb-2 text-[#26A0DC]" />,
+//       title: t("cloud"),
+//       text: t("cloudText"),
+//     },
+//     {
+//       icon: <FaServer className="w-8 h-8 mb-2 text-[#26A0DC]" />,
+//       title: t("infra"),
+//       text: t("infraText"),
+//     },
+//   ];
+
+//   return (
+//     <section
+//       id="hero"
+//       className={`relative ${dark ? "text-white" : "text-gray-900"}`}
+//       style={{
+//         backgroundImage: "url('/images/1155692_5940.jpg')",
+//         backgroundSize: "cover",
+//         backgroundPosition: "center",
+//         backgroundRepeat: "no-repeat",
+//         backgroundBlendMode: "overlay",
+//         backgroundColor: "#26A0DC",
+//       }}
+//     >
+//       <div className="max-w-7xl mx-auto w-full px-6 py-20 flex flex-col gap-12">
+//         {/* Row 1: الصورة على اليسار والنص على اليمين */}
+//         <div className="flex flex-col md:flex-row items-center gap-12">
+//           {/* الصورة على اليسار */}
+//           {/* <div className="flex-1 hidden md:block">
+//             <img
+//               src="/images/itSupport-rmbg.png"
+//               alt="Vector Art"
+//               className="w-full h-auto"
+//             />
+//           </div> */}
+
+//           {/* النص والزر على اليمين بالكامل */}
+//           <motion.div
+//             initial={{ opacity: 0, x: 50 }}
+//             animate={{ opacity: 1, x: 0 }}
+//             transition={{ duration: 1 }}
+//             className="flex-1 flex flex-col items-end text-right"
+//           >
+//             <h1 className="text-4xl md:text-6xl font-bold mb-4">
+//               {t("title")}
+//             </h1>
+//             <p className="text-lg md:text-2xl mb-6">{t("subtitle")}</p>
+//             <a
+//               href="#services"
+//               className={`inline-block px-8 py-3 rounded-xl font-semibold shadow-lg hover:shadow-2xl hover:scale-105 transition-all ${
+//                 dark
+//                   ? "bg-gradient-to-r from-[#1B82C9] to-[#26A0DC] text-white"
+//                   : "bg-gradient-to-r from-[#26A0DC] to-[#1B82C9] text-white"
+//               }`}
+//             >
+//               {t("button")}
+//             </a>
+//           </motion.div>
+
+//           <div className="flex-1 hidden md:block">
+//             <img
+//               src="/images/itSupport-rmbg.png"
+//               alt="Vector Art"
+//               className="w-full h-auto"
+//             />
+//           </div>
+//         </div>
+
+//         {/* Row 2: الكارد أفقي يبدأ من اليمين */}
+//         <motion.div
+//           initial={{ opacity: 0, y: 50 }}
+//           animate={{ opacity: 1, y: 0 }}
+//           transition={{ duration: 1 }}
+//           className="flex flex-row-reverse flex-wrap gap-6"
+//         >
+//           {cards.map((card, index) => (
+//             <div
+//               key={index}
+//               className={`bg-white/20 backdrop-blur-md border border-white/30 rounded-2xl p-6 flex-1 min-w-[250px] flex flex-col items-center text-center shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-transform ${
+//                 dark ? "text-white" : "text-black"
+//               }`}
+//             >
+//               {card.icon}
+//               <h3 className="font-bold text-xl mb-2">{card.title}</h3>
+//               <p>{card.text}</p>
+//             </div>
+//           ))}
+//         </motion.div>
+//       </div>
+//     </section>
+//   );
+// }
+
+
+
 "use client";
 import { motion } from "framer-motion";
 import { FaLaptopCode, FaMobileAlt, FaCloud, FaServer } from "react-icons/fa";
@@ -5,8 +122,9 @@ import { useTranslation } from "react-i18next";
 import { useSettings } from "../context/SettingsContext";
 
 export default function Hero() {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const { dark } = useSettings();
+  const rtl = i18n.dir() === "rtl";
 
   const cards = [
     {
@@ -34,7 +152,7 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className={`relative ${dark ? "text-white" : "text-gray-900"}`}
+      className={`relative ${dark ? "text-white" : "text-gray-900"} pt-24`}
       style={{
         backgroundImage: "url('/images/1155692_5940.jpg')",
         backgroundSize: "cover",
@@ -44,32 +162,32 @@ export default function Hero() {
         backgroundColor: "#26A0DC",
       }}
     >
-      <div className="max-w-7xl mx-auto w-full px-6 py-20 flex flex-col gap-12">
-        {/* Row 1: الصورة على اليسار والنص على اليمين */}
-        <div className="flex flex-col md:flex-row items-center gap-12">
-          {/* الصورة على اليسار */}
-          {/* <div className="flex-1 hidden md:block">
-            <img
-              src="/images/itSupport-rmbg.png"
-              alt="Vector Art"
-              className="w-full h-auto"
-            />
-          </div> */}
+      <div className="max-w-7xl mx-auto w-full px-6 py-20 flex flex-col gap-16">
 
-          {/* النص والزر على اليمين بالكامل */}
+        {/* Row 1 - النص والصورة */}
+        <div
+          className={`flex flex-col-reverse lg:flex-row items-center gap-12 ${
+            rtl ? "text-right" : "text-left"
+          }`}
+        >
+          {/* النص */}
           <motion.div
-            initial={{ opacity: 0, x: 50 }}
+            initial={{ opacity: 0, x: rtl ? 40 : -40 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 1 }}
-            className="flex-1 flex flex-col items-end text-right"
+            className="flex-1 flex flex-col"
           >
-            <h1 className="text-4xl md:text-6xl font-bold mb-4">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 leading-tight">
               {t("title")}
             </h1>
-            <p className="text-lg md:text-2xl mb-6">{t("subtitle")}</p>
+
+            <p className="text-lg sm:text-xl md:text-2xl mb-6 opacity-90">
+              {t("subtitle")}
+            </p>
+
             <a
               href="#services"
-              className={`inline-block px-8 py-3 rounded-xl font-semibold shadow-lg hover:shadow-2xl hover:scale-105 transition-all ${
+              className={`inline-block px-8 py-3 rounded-xl text-lg font-semibold shadow-lg hover:shadow-2xl hover:scale-105 transition-all w-fit ${
                 dark
                   ? "bg-gradient-to-r from-[#1B82C9] to-[#26A0DC] text-white"
                   : "bg-gradient-to-r from-[#26A0DC] to-[#1B82C9] text-white"
@@ -79,32 +197,38 @@ export default function Hero() {
             </a>
           </motion.div>
 
-          <div className="flex-1 hidden md:block">
+          {/* الصورة */}
+          <motion.div
+            initial={{ opacity: 0, x: rtl ? -40 : 40 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 1 }}
+            className="flex-1 flex justify-center"
+          >
             <img
               src="/images/itSupport-rmbg.png"
-              alt="Vector Art"
-              className="w-full h-auto"
+              alt="IT Vector"
+              className="w-72 sm:w-80 md:w-[400px] lg:w-[480px] h-auto drop-shadow-xl"
             />
-          </div>
+          </motion.div>
         </div>
 
-        {/* Row 2: الكارد أفقي يبدأ من اليمين */}
+        {/* Row 2 - الكروت */}
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
-          className="flex flex-row-reverse flex-wrap gap-6"
+          className={`grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6`}
         >
           {cards.map((card, index) => (
             <div
               key={index}
-              className={`bg-white/20 backdrop-blur-md border border-white/30 rounded-2xl p-6 flex-1 min-w-[250px] flex flex-col items-center text-center shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-transform ${
+              className={`bg-white/20 backdrop-blur-md border border-white/30 rounded-2xl p-6 flex flex-col items-center text-center shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-transform ${
                 dark ? "text-white" : "text-black"
               }`}
             >
               {card.icon}
               <h3 className="font-bold text-xl mb-2">{card.title}</h3>
-              <p>{card.text}</p>
+              <p className="text-sm opacity-90">{card.text}</p>
             </div>
           ))}
         </motion.div>
