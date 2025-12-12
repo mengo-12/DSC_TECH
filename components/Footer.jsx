@@ -81,7 +81,7 @@ export default function Footer() {
       </div>
 
       <div className="border-t border-white/20 mt-12 pt-6 text-center text-sm opacity-70">
-        © {new Date().getFullYear()} YOSR TECH — {t("rights")}
+        © {new Date().getFullYear()} DSC TECH — {t("rights")}
       </div>
     </footer>
   );
