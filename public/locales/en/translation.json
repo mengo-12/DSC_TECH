@@ -1,11 +1,10 @@
 {
 
-  "logo": "ايكو تك",
-  "home": "الرئيسية",
-  "about": "من نحن",
-  "projects": "مشاريعنا",
-  "faq": "الأسئلة الشائعة",
-  "getInTouch": "تواصل معنا",
+  "home": "home",
+  "about": "About us",
+  "projects": "Projects",
+  "faq": "faq",
+  "getInTouch": "Content",
 
 
     "title": "Welcome to the nucleus of digital solutions for information technology",
@@ -87,13 +86,13 @@
 
 
 
-    "companyName": "YOSR TECH",
+    "companyName": "The core of digital solutions TECH",
     "aboutText": "A company specialized in providing innovative technology solutions including networks, systems, cybersecurity, web development, and technical support.",
     "quickLinks": "Quick Links",
     "contactUs": "Contact Us",
-    "phone": "+966 55 555 5555",
+    "phone": "+966 566555627",
     "email": "info@yosr.com.sa",
-    "address": "Saudi Arabia - Riyadh",
+    "address": "Saudi Arabia - makkah",
     "newsletter": "Newsletter",
     "newsletterText": "Subscribe to receive our latest updates.",
     "emailPlaceholder": "Email Address",

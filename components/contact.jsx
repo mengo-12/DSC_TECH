@@ -48,7 +48,7 @@ export default function Contact() {
           <div className="space-y-4">
             <div className="flex items-center gap-4">
               <span className="text-3xl">📍</span>
-              <p>{t("contactAddress", "الرياض، المملكة العربية السعودية")}</p>
+              <p>{t("contactAddress", "مكة المكرمة، المملكة العربية السعودية")}</p>
             </div>
             <div className="flex items-center gap-4">
               <span className="text-3xl">📧</span>
@@ -56,7 +56,7 @@ export default function Contact() {
             </div>
             <div className="flex items-center gap-4">
               <span className="text-3xl">📞</span>
-              <p>+966 5X XXX XXXX</p>
+              <p>+966566555627</p>
             </div>
           </div>
         </motion.div>
